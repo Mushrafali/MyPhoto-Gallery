@@ -1,0 +1,99 @@
+@import url('reset.css');
+/* General Codrops Demo Style */
+
+body {
+    background: #1F1F1F url(../images/pattern.png) repeat top left;
+    color: rgb(0, 255, 42);
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: rgb(0, 255, 213);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00c6e3;
+}
+
+p.sub {
+    padding: 25px 10px 10px 10px;
+    text-align: left;
+    color: rgb(0, 47, 255);
+}
+
+.clr {
+    clear: both;
+}
+
+h1 {
+    margin: 15px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(4, 0, 255);
+    font-family: "arial";
+    text-shadow: 1px 1px 1px #000;
+    padding-bottom: 30px;
+    line-height: 40px;
+}
+
+h1 span {
+    font-size: 10px;
+    display: block;
+    letter-spacing: 2px;
+    font-family: 'Trebuchet MS';
+    color: #e5ff00;
+    line-height: 14px;
+    padding-top: 10px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+/* Header Style */
+
+.header {
+    font-size: 13px;
+    background: rgb(247, 197, 197);
+    opacity: 0.9;
+    text-transform: uppercase;
+    -moz-box-shadow: 1px 0px 2px rgb(204, 168, 168);
+    -webkit-box-shadow: 1px 0px 2px rgb(255, 138, 138);
+    box-shadow: 1px 0px 2px rgb(175, 175, 175);
+}
+
+.header a {
+    line-height: 18px;
+    padding: 0 4px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgb(252, 5, 5);
+    color: #ddd;
+}
+
+.header a:hover {
+    color: rgb(77, 31, 31);
+}
+
+.header a span {
+    font-weight: bold;
+}
+
+.header span.right_ab {
+    float: right;
+}
+
+.content {
+    margin: 0px 25px 30px 25px;
+}
+
+@media screen and (max-width: 640px) {
+    .header a {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+        text-shadow: none;
+    }
+    .header span.right_ab {
+        float: none;
+    }
+}

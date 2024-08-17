@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Photo Gallery</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Photo Gallery with jQuery" />
+    <meta name="keywords" content="jquery, carousel, image gallery, slider, responsive, flexible, fluid, resize, css3" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+    <noscript> <style> .es-carousel ul{ display:block; } </style>
+	</noscript>
+    <script type="text/javascript">
+        //PLEASE DON'T ADD THIS TO YOUR SITE! PLEASE DOWNLOAD THE ZIP AND DON'T COPY THIS PAGE! THIS IS THE GOOGLE ANALYTICS TRACKING FOR CODROPS
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7243260-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+                
+                <div class="rg-image-wrapper">
+                    {{if itemsCount > 1}}
+                        <div class="rg-image-nav">
+                            <a href="#" class="rg-image-nav-prev">Previous Image</a>
+                            <a href="#" class="rg-image-nav-next">Next Image</a>
+                        </div>
+                    {{/if}}
+                    <div class="rg-image"></div>
+                    <div class="rg-loading"></div>
+                    <div class="rg-caption-wrapper">
+                        <div class="rg-caption" style="display:none;">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://codrops/adpacks/demoad.css?1657079493865">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="content">
+            <h1>Photo Gallery <span>Every picture tells a story</span></h1>
+            <div id="rg-gallery" class="rg-gallery">
+                <div class="rg-view">
+                    <a href="#" class="rg-view-full"></a>
+                    <a href="#" class="rg-view-thumbs"></a>
+                </div>
+                <div class="rg-thumbs">
+                    <!-- Elastislide Carousel Thumbnail Viewer -->
+                    <div class="es-carousel-wrapper">
+                        <div class="es-nav">
+                            <span class="es-nav-prev">Previous</span>
+                            <span class="es-nav-next">Next</span>
+                        </div>
+                        <div class="es-carousel">
+                            <ul style="width: 1738px; display: block; margin-left: 0px;">
+                                <li class="selected" style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/2.jpg" data-large="images/2.jpg" alt="image02" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/3.jpg" data-large="images/3.jpg" alt="image03" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/4.jpg" data-large="images/4.jpg" alt="image04" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/5.jpg" data-large="images/5.jpg" alt="image05" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/6.jpg" data-large="images/6.jpg" alt="image06" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/7.jpg" data-large="images/7.jpg" alt="image07" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/8.jpg" data-large="images/8.jpg" alt="image08" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/9.jpg" data-large="images/9.jpg" alt="image09" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                                <li style="margin-right: 3px; width: 29px;"><a href="#" style="border-width: 2px;"><img src="images/thumbs/10.jpg" data-large="images/10.jpg" alt="image10" data-description="Heaven is under our feet as well as over our heads" /></a></li>
+                            </ul>
+                        </div>
+                        <div class="es-nav">
+                            <span class="es-nav-prev">Previous</span>
+                            <span class="es-nav-next">Next</span>
+                        </div>
+                    </div>
+                    <!-- End Elastislide Carousel Thumbnail Viewer -->
+                </div>
+                <!-- rg-thumbs -->
+                <div class="rg-image-wrapper">
+                    <div class="rg-image-nav">
+                        <a href="#" class="rg-image-nav-prev">Previous Image</a>
+                        <a href="#" class="rg-image-nav-next">Next Image</a>
+                    </div>
+                    <div class="rg-image">
+                        <img src="images/1.jpg">
+                    </div>
+                    <div class="rg-loading" style="display: images/ajax-loader"></div>
+                    <div class="rg-caption-wrapper">
+                        <div class="rg-caption" style>
+                            <p>Heaven is under our feet as well as over our heads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- rg-gallery -->    
+        </div>
+        <!-- content -->
+    </div>
+    <!-- container -->
+    <script type="text/javascript" src="//ajax/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+    <script src="//codrops/adpacks/demoad.js"></script>
+</body>
+
+</html>
